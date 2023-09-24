@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         fabCamera = findViewById(R.id.fabCamera);
         rvMainPetsList = findViewById(R.id.rvMainPetsList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvMainPetsList.setLayoutManager(linearLayoutManager);
         btnStar = findViewById(R.id.btnStar);
     }

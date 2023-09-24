@@ -49,6 +49,7 @@ public class RatingActivity extends AppCompatActivity {
     private void initUI(){
         rvRatingPetsList = findViewById(R.id.rvRatingPetsList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvRatingPetsList.setLayoutManager(linearLayoutManager);
         ImageButton btnStar = findViewById(R.id.btnStar);
         btnStar.setVisibility(View.GONE);

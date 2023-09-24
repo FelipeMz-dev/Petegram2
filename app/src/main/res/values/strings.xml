@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Petagram</string>
+    <string name="pet_rated">Pet has been rated</string>
+    <string name="pet_unrated">Pet has been unrated</string>
+    <string name="options">Options</string>
+</resources>

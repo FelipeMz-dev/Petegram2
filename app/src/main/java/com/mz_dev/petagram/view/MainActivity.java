@@ -1,5 +1,6 @@
 package com.mz_dev.petagram;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         initUI();
+        initManager();
         initPetList();
         initAdapter();
         initListener();
@@ -45,13 +49,31 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        final int itemId = item.getItemId();
+        if (itemId == R.id.menuContact){
+            Intent intent = new Intent(this, ContactActivity.class);
+            startActivity(intent);
+        } else if (itemId == R.id.menuAbout) {
+            Intent intent = new Intent(this, ContactActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     private void initUI(){
         fabCamera = findViewById(R.id.fabCamera);
         rvMainPetsList = findViewById(R.id.rvMainPetsList);
+        btnStar = findViewById(R.id.btnStar);
+        btnStar.setVisibility(View.VISIBLE);
+    }
+
+    private void initManager(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvMainPetsList.setLayoutManager(linearLayoutManager);
-        btnStar = findViewById(R.id.btnStar);
     }
 
     private void initAdapter(){

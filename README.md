@@ -6,3 +6,5 @@ Main activity.
 Rating activity.
 
 ![Main activity](https://github.com/FelipeMz-dev/Mascotas-rv-y-av/assets/75095139/17c63ed8-528d-4b08-b713-1902f538315c)
+# Petegram2
+# Petegram2

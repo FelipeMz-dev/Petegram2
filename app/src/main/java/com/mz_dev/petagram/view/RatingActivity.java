@@ -51,8 +51,6 @@ public class RatingActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvRatingPetsList.setLayoutManager(linearLayoutManager);
-        ImageButton btnStar = findViewById(R.id.btnStar);
-        btnStar.setVisibility(View.GONE);
     }
 
     private void initAdapter(){

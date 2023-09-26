@@ -1,4 +1,4 @@
-package com.mz_dev.petagram.email;
+package com.mz_dev.petagram.mailHelper;
 
 import android.app.ProgressDialog;
 import android.content.Context;

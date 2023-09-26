@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearLayoutProfile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="?attr/editTextBackground"
+        android:gravity="center"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ivPetProfile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pet1"
+            tools:civ_border_color="@color/colorAccent"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="1dp" />
+
+        <TextView
+            android:id="@+id/tvPetNameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="nombre de mascota" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfileImages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/linearLayoutProfile"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

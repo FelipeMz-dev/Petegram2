@@ -1,4 +1,4 @@
-package com.mz_dev.petagram;
+package com.mz_dev.petagram.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mz_dev.petagram.R;
+import com.mz_dev.petagram.pojo.Pet;
 
 import java.util.ArrayList;
 

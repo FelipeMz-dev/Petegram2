@@ -1,4 +1,4 @@
-package com.mz_dev.petagram;
+package com.mz_dev.petagram.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -7,10 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.ImageButton;
 
-import static com.mz_dev.petagram.MainActivity.PETS_OBJ;
+import static com.mz_dev.petagram.view.MainActivity.PETS_OBJ;
+
+import com.mz_dev.petagram.NavigationMenuOptions;
+import com.mz_dev.petagram.adapter.PetAdapter;
+import com.mz_dev.petagram.R;
+import com.mz_dev.petagram.pojo.Pet;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -38,6 +41,8 @@ public class RatingActivity extends AppCompatActivity {
         if (pets == null) pets = new ArrayList<>();
         initUI();
         initAdapter();
+
+        new NavigationMenuOptions(this);
     }
 
     @Override

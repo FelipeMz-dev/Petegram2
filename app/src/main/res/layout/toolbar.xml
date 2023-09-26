@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="@color/primaryColor"
     android:elevation="4dp"
+    app:layout_scrollFlags="scroll|enterAlways"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
@@ -16,10 +16,10 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
             android:layout_alignParentStart="true"
             android:adjustViewBounds="true"
-            android:padding="10dp"
             android:src="@drawable/dog_footprint" />
 
         <TextView
@@ -38,11 +38,13 @@
             android:id="@+id/btnStar"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:padding="5dp"
             android:layout_alignParentEnd="true"
             android:adjustViewBounds="true"
             android:background="?attr/colorPrimary"
             android:scaleType="centerCrop"
-            android:src="@drawable/icon_star" />
+            android:src="@drawable/icon_star"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/tvRatingNumber"

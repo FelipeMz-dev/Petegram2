@@ -1,4 +1,4 @@
-package com.mz_dev.petagram;
+package com.mz_dev.petagram.pojo;
 
 import java.io.Serializable;
 

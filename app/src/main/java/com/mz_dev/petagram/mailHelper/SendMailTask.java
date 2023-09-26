@@ -72,8 +72,9 @@ public class SendMailTask extends AsyncTask<Void, Void, Boolean> {
                     "\nComment:\n" + message;
             Message mimeMessage = createMessage(senderEmail, senderEmail, messageBody);
             Transport.send (mimeMessage);
-            String messageBodyConfirm = "Hello " + name +
-                    ", we have received your comment. Thanks for your time";
+            //Confirm
+            String messageBodyConfirm = "Hello! " + name +
+                    ", we have received your comment.\nThanks for your time.";
             Message confirmMessage = createMessage(senderEmail, email, messageBodyConfirm);
             Transport.send(confirmMessage);
             return true;

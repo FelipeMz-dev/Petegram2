@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.mz_dev.petagram.OptionsMenuHandler;
 import com.mz_dev.petagram.adapter.PageAdapter;
 import com.mz_dev.petagram.R;
 import com.mz_dev.petagram.fragment.HomeFragment;
@@ -61,15 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        final int itemId = item.getItemId();
-        if (itemId == R.id.menuContact){
-            Intent intent = new Intent(this, ContactActivity.class);
-            startActivity(intent);
-        } else if (itemId == R.id.menuAbout) {
-            Intent intent = new Intent(this, AboutActivity.class);
-            startActivity(intent);
-        }
-
+        if (OptionsMenuHandler.handleOptionsItemSelected(item, this)) return true;
         return super.onOptionsItemSelected(item);
     }
 

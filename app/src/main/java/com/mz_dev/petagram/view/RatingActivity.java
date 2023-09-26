@@ -1,5 +1,6 @@
 package com.mz_dev.petagram.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,10 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import static com.mz_dev.petagram.view.MainActivity.PETS_OBJ;
 
-import com.mz_dev.petagram.NavigationMenuOptions;
+import com.mz_dev.petagram.OptionsMenuHandler;
 import com.mz_dev.petagram.adapter.PetAdapter;
 import com.mz_dev.petagram.R;
 import com.mz_dev.petagram.pojo.Pet;
@@ -41,14 +43,18 @@ public class RatingActivity extends AppCompatActivity {
         if (pets == null) pets = new ArrayList<>();
         initUI();
         initAdapter();
-
-        new NavigationMenuOptions(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (OptionsMenuHandler.handleOptionsItemSelected(item, this)) return true;
+        return super.onOptionsItemSelected(item);
     }
 
     private void initUI(){
